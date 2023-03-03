@@ -1,0 +1,6 @@
+name: Tomcat4Bungeecord
+prefix: Tomcat4Bungeecord
+description: Run tomcat on your proxy server
+main: com.juanmuscaria.cursed.cursed_tomcat.TBungeecord
+version: ${version}
+author: "juanmuscaria"

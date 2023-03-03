@@ -1,0 +1,10 @@
+modLoader="javafml"
+loaderVersion="[0,)"
+license="All Rights Reserved"
+
+[[mods]]
+    modId="tomcat4forge"
+    version="${version}"
+    displayName="Tomcat4Forge"
+    authors="juanmuscaria"
+    description='''Run tomcat on your minecraft server (or client?)'''

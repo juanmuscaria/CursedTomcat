@@ -1,0 +1,15 @@
+name: Tomcat4Bukkit
+prefix: Tomcat4Bukkit
+description: Run tomcat on your minecraft server
+main: com.juanmuscaria.cursed.cursed_tomcat.TBukkit
+version: ${version}
+author: "juanmuscaria"
+commands:
+  tomcat:
+    description: "Controls the internal tomcat server"
+    permission: "tomcat.admin"
+    aliases: ["tomcat4bukkit","t4b","tb"]
+    usage: "/tomcat <start|stop|restart>"
+permissions:
+  tomcat.admin:
+    description: "Can administrate the internal tomcat server"

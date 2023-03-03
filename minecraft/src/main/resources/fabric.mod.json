@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "tomcat4fabric",
+  "version": "${version}",
+
+  "name": "Tomcat4Fabric",
+  "description": "Run tomcat on your minecraft server (or client?)",
+  "authors": [
+    "juanmuscaria"
+  ],
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.juanmuscaria.cursed.cursed_tomcat.TFabric"
+    ]
+  }
+}

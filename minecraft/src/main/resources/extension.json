@@ -1,0 +1,5 @@
+{
+  "entrypoint": "com.juanmuscaria.cursed.cursed_tomcat.TMinestom",
+  "name": "Tomcat4Minestom",
+  "version": "${version}"
+}

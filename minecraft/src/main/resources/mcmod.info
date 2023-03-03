@@ -1,0 +1,9 @@
+[{
+  "modid": "tomcat4sponge",
+  "name": "Tomcat4Sponge",
+  "version": "${version}",
+  "description": "Run tomcat on your minecraft server (or client? why would want to do that?)",
+  "authorList": [
+    "juanmuscaria"
+  ]
+}]

@@ -1,0 +1,9 @@
+{
+  "id":"tomcat4velocity",
+  "name":"Tomcat4Velocity",
+  "version":"${version}",
+  "description":"Run tomcat on your proxy",
+  "authors":["juanmuscaria"],
+  "dependencies":[],
+  "main":"com.juanmuscaria.cursed.cursed_tomcat.TVelocity"
+}

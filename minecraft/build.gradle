@@ -1,0 +1,64 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+description 'Run Tomcat on your minecraft server'
+
+repositories {
+    maven {
+        name 'sponge-repo'
+        url 'https://repo.spongepowered.org/maven'
+    }
+    maven {
+        name 'velocity'
+        url 'https://nexus.velocitypowered.com/repository/maven-public/'
+    }
+    maven {
+        name 'spigot'
+        url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+    }
+    // jitpack is too buggy :/
+//    maven {
+//        name 'jitpack'
+//        url 'https://jitpack.io'
+//    }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    compileOnly 'org.spigotmc:spigot-api:1.18-R0.1-SNAPSHOT'
+
+    compileOnly 'net.md-5:bungeecord-api:1.18-R0.1-SNAPSHOT'
+
+    compileOnly 'org.spongepowered:spongeapi:7.2.0'
+
+    compileOnly 'com.velocitypowered:velocity-api:3.0.1'
+    //annotationProcessor 'com.velocitypowered:velocity-api:3.0.1'
+
+    //TODO: re-add minestom once they gave releases
+    //compileOnly 'com.github.Minestom:Minestom:51abd95bcb'
+
+    compileOnly 'org.apache.logging.log4j:log4j-api:2.17.1'
+    compileOnly 'org.apache.logging.log4j:log4j-core:2.17.1'
+    compileOnly 'net.minecraft:launchwrapper:1.12'
+
+    implementation(project(":base"))
+    compileOnly(project(":fakeClasses"))
+}
+
+test {
+    useJUnitPlatform()
+}
+
+shadowJar {
+    archiveClassifier.set('')
+    archivesBaseName = "Tomcat4Minecraft"
+//    relocate("javax.servlet", "cursed.javax.servlet")
+//    relocate("org.apache", "cursed.org.apache")
+//    relocate("org.eclipse", "cursed.org.eclipse")
+}
+processResources {
+    expand('version' : version)
+}
